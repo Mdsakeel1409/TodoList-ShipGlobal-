@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List with Status Navigation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="box">
+            <div class="column" id="backlog">
+                <h3>Backlog</h3>
+                <div class="task">
+                    Task 1 <button class="button-right" onclick="moveTask(this, 'toDo')">→</button>
+                </div>
+                <div class="task">
+                    Task 2 <button class="button-right" onclick="moveTask(this, 'toDo')">→</button>
+                </div>
+                <div class="task">
+                    Task 3 <button class="button-right" onclick="moveTask(this, 'toDo')">→</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="column" id="toDo">
+                <h3>To Do</h3>
+                <div class="task">
+                    <button class="button-left" onclick="moveTask(this, 'backlog')">←</button> Task 4 <button
+                        class="button-right" onclick="moveTask(this, 'ongoing')">→</button>
+                </div>
+                <div class="task">
+                    <button class="button-left" onclick="moveTask(this, 'backlog')">←</button> Task 5 <button
+                        class="button-right" onclick="moveTask(this, 'ongoing')">→</button>
+                </div>
+                <div class="task">
+                    <button class="button-left" onclick="moveTask(this, 'backlog')">←</button> Task 6 <button
+                        class="button-right" onclick="moveTask(this, 'ongoing')">→</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="column" id="ongoing">
+                <h3>Ongoing</h3>
+                <div class="task">
+                    <button class="button-left" onclick="moveTask(this, 'toDo')">←</button> Task 7 <button
+                        class="button-right" onclick="moveTask(this, 'done')">→</button>
+                </div>
+                <div class="task">
+                    <button class="button-left" onclick="moveTask(this, 'toDo')">←</button> Task 8 <button
+                        class="button-right" onclick="moveTask(this, 'done')">→</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="column" id="done">
+                <h3>Done</h3>
+                <div class="task">
+                    <button class="button-left" onclick="moveTask(this, 'ongoing')">←</button> Task 9
+                </div>
+                <div class="task">
+                    <button class="button-left" onclick="moveTask(this, 'ongoing')">←</button> Task 10
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
